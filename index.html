@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking Calendar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="container">
+    <header class="header">
+      <h1>Book Your Event</h1>
+      <p>Select a date and time for your event.</p>
+    </header>
+
+    <section class="booking-card">
+
+      <div class="calendar-section">
+        <div class="calendar-header">
+          <button id="prevMonth" aria-label="Previous month">‹</button>
+          <h2 id="monthYear"></h2>
+          <button id="nextMonth" aria-label="Next month">›</button>
+        </div>
+
+        <div class="weekdays">
+          <span>Sun</span>
+          <span>Mon</span>
+          <span>Tue</span>
+          <span>Wed</span>
+          <span>Thu</span>
+          <span>Fri</span>
+          <span>Sat</span>
+        </div>
+
+        <div id="calendar" class="calendar"></div>
+
+        <div class="legend">
+          <span><i class="available"></i> Available</span>
+          <span><i class="selected"></i> Selected</span>
+          <span><i class="unavailable"></i> Unavailable</span>
+        </div>
+      </div>
+
+      <div class="details-section">
+        <h2>Booking Details</h2>
+
+        <div id="selectedDateText" class="selected-date">
+          Select a date from the calendar
+        </div>
+
+        <label for="time">Time</label>
+        <select id="time" disabled>
+          <option value="">Select a time</option>
+        </select>
+
+        <label for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Your name"
+          autocomplete="name"
+        >
+
+        <label for="eventType">Event Type</label>
+        <select id="eventType">
+          <option value="">Select event type</option>
+          <option value="Wedding">Wedding</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Corporate Event">Corporate Event</option>
+          <option value="Private Party">Private Party</option>
+          <option value="Conference">Conference</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <button id="bookButton" class="book-button">
+          Confirm Booking
+        </button>
+
+        <div id="message" class="message"></div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
